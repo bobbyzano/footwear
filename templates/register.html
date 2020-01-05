@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>Footwear - Free Bootstrap 4 Template by Colorlib</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Animate.css -->
+	<link rel="stylesheet" href="static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="static/css/icomoon.css">
+	<!-- Ion Icon Fonts-->
+	<link rel="stylesheet" href="static/css/ionicons.min.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="static/css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="static/css/flexslider.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="static/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="static/css/style.css">
+
+
+
+{% include 'includes/_navbar.html' %}
+
+</head>
+	<body>
+
+    <h1>Create an account</h1>
+        Have a business?  <a href="/business_account" >Create a business account</a>
+{% from "includes/_formhelpers.html" import render_field %}
+<form action="/register" method="POST">
+    <div class="form-group  col-md-5">
+        {{render_field(form.name, class="form-control")}}
+    </div>
+     <div class="form-group col-md-5">
+        {{render_field(form.email, class="form-control")}}
+    </div>
+     <div class="form-group col-md-5">
+        {{render_field(form.username, class="form-control")}}
+    </div>
+     <div class="form-group col-md-5">
+        {{render_field(form.password, class="form-control")}}
+    </div>
+     <div class="form-group col-md-5">
+        {{render_field(form.confirm, class="form-control")}}
+    </div>
+
+    <p> <input type="submit" class="btn btn-primary" value="submit"></p>
+</form>
+{% include "includes/_footer.html" %}
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
+	</div>
+
+{% include "includes/_scripts.html" %}
+
+	</body>
+</html>
