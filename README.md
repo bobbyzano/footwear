@@ -11,6 +11,6 @@ Front-End
   (i) Python - Flask <br>
   (ii) MySQL
  
- this project is still an work in progress
+ this project is still a work in progress
 
 
